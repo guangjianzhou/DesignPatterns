@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    BOOL isSucces;
+}
 
+@property (nonatomic, strong) NSString *vcTag;
 
 @end
 
