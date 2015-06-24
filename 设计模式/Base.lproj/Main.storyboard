@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XEW-FY-muf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Exc-Yc-h1g">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" rowHeight="60" id="tEP-8a-aT4">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tEP-8a-aT4" id="83b-Nf-Uc6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Q26-F0-CIf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gkw-k3-JgJ"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g76-bx-p5r">
+                                <rect key="frame" x="0.0" y="538" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kd3-qO-R9o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g76-bx-p5r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CQh-5L-B0h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g76-bx-p5r" secondAttribute="bottom" id="Cw9-6o-Jek"/>
+                            <constraint firstItem="Exc-Yc-h1g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ix3-Ei-Y9a"/>
+                            <constraint firstItem="Exc-Yc-h1g" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="K17-DK-YM7"/>
+                            <constraint firstAttribute="trailing" secondItem="Exc-Yc-h1g" secondAttribute="trailing" id="PJR-ig-OEY"/>
+                            <constraint firstAttribute="trailing" secondItem="g76-bx-p5r" secondAttribute="trailing" id="Zg4-wC-wAq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Exc-Yc-h1g" secondAttribute="bottom" constant="68" id="kvo-3w-CwI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w0Z-OM-ELc"/>
+                    <connections>
+                        <outlet property="tableView" destination="Exc-Yc-h1g" id="hYh-NL-iQe"/>
+                        <outlet property="textField1" destination="g76-bx-p5r" id="24b-2j-7AD"/>
+                        <segue destination="IOm-on-zNP" kind="push" identifier="FactoryViewControllerSegue" id="NIb-IZ-xJ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-646" y="230"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bZH-Ap-l1q">
+            <objects>
+                <navigationController id="XEW-FY-muf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hfK-A6-dtl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4zT-Qw-OAO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fT-Oe-nCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1208" y="219"/>
+        </scene>
+        <!--FactoryViewController-->
+        <scene sceneID="yeh-PU-OlX">
+            <objects>
+                <viewController id="IOm-on-zNP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bBz-BZ-X1Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="3gg-m2-I6Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JTb-lY-BW4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FactoryViewController" id="BDa-P6-H7t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbs-6s-ZBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="-401"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
